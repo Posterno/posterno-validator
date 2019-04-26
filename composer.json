@@ -21,17 +21,10 @@
 	},
 	"require-dev": {
 		"dealerdirect/phpcodesniffer-composer-installer": "0.4.4",
-		"pressmodo/phpcs-config": "dev-master",
-		"phpunit/phpunit": "^7"
-	},
-	"autoload-dev": {
-        "psr-4": {
-            "PNO\\Validator\\Test\\": "tests/"
-        }
+		"pressmodo/phpcs-config": "dev-master"
 	},
 	"scripts": {
 		"lint": "phpcs .",
-		"lint-fix": "phpcbf .",
-		"test": "./vendor/bin/phpunit --bootstrap vendor/autoload.php tests"
+		"lint-fix": "phpcbf ."
 	}
 }
