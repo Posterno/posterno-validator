@@ -17,15 +17,15 @@ namespace PNO\Validator;
 defined( 'ABSPATH' ) || exit;
 
 /**
- * Make sure the input is not empty.
+ * Alpha numeric validation rules.
  */
-class NotEmpty extends AbstractValidator {
+class AlphaNumeric extends AbstractValidator {
 
 	/**
-	 * Make sure the input is not empty.
+	 * Verify the value contains only alphanumeric characters.
 	 *
-	 * @param mixed $input the value to validate.
-	 * @return mixed
+	 * @param string $input the string to validate.
+	 * @return boolean
 	 */
 	public function evaluate( $input = null ) {
 		if ( null !== $input ) {
@@ -33,10 +33,10 @@ class NotEmpty extends AbstractValidator {
 		}
 
 		if ( null === $this->message ) {
-			$this->message = 'Value must not be empty.';
+			$this->message = 'The value must only contain alphanumeric characters.';
 		}
 
-		return ( ! empty( $this->input ) );
+		return (bool) ( preg_match( '/^\w+$/', $this->input ) );
 	}
 
 }
