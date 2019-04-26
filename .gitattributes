@@ -7,8 +7,13 @@
 /.gitignore           export-ignore
 /changelog.md         export-ignore
 /composer.lock        export-ignore
+/composer.json        export-ignore
 /contributing.md      export-ignore
 /.vscode      	      export-ignore
+/tests      	      export-ignore
+/LICENSE      	      export-ignore
+/phpcs.xml    	      export-ignore
+/phpunit.xml      	  export-ignore
 
 * text eol=lf
 *.gif binary
