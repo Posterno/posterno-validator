@@ -16,7 +16,7 @@
 	},
 	"autoload": {
 		"psr-4": {
-			"PNO\\Validator\\": "includes"
+			"PNO\\Validator\\": "src/"
 		}
 	},
 	"require-dev": {
