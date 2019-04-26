@@ -19,7 +19,7 @@ defined( 'ABSPATH' ) || exit;
 /**
  * Make sure the input is greater than or equals the specified value.
  */
-class GreaterThan extends AbstractValidator {
+class GreaterThanEqual extends AbstractValidator {
 
 	/**
 	 * Make sure the input is greater than or equals the specified value.
