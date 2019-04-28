@@ -33,7 +33,7 @@ class Equal extends AbstractValidator {
 		}
 
 		if ( null === $this->message ) {
-			$this->message = 'The value must be equal to ' . $this->value . '.';
+			$this->message = sprintf( esc_html__( 'The value must be equal to %s.' ), $this->value );
 		}
 
 		return ( $this->input === $this->value );

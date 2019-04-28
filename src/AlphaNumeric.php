@@ -33,7 +33,7 @@ class AlphaNumeric extends AbstractValidator {
 		}
 
 		if ( null === $this->message ) {
-			$this->message = 'The value must only contain alphanumeric characters.';
+			$this->message = sprintf( esc_html__( 'The value must only contain alphanumeric characters %s.' ), $this->value );
 		}
 
 		return (bool) ( preg_match( '/^\w+$/', $this->input ) );

@@ -33,7 +33,7 @@ class NotEmpty extends AbstractValidator {
 		}
 
 		if ( null === $this->message ) {
-			$this->message = 'Value must not be empty.';
+			$this->message = esc_html__( 'Value must not be empty.' );
 		}
 
 		return ( ! empty( $this->input ) );

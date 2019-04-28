@@ -33,7 +33,7 @@ class Numeric extends AbstractValidator {
 		}
 
 		if ( null === $this->message ) {
-			$this->message = 'Value must be numeric.';
+			$this->message = esc_html__( 'Value must be numeric.' );
 		}
 
 		return ( is_numeric( $this->input ) );

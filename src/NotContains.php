@@ -32,7 +32,7 @@ class NotContains extends AbstractValidator {
 			$this->input = $input;
 		}
 		if ( null === $this->message ) {
-			$this->message = 'The input must be not contained in the value.';
+			$this->message = esc_html__( 'The input must be not contained in the value.' );
 		}
 		$result   = false;
 		$needle   = $this->value;

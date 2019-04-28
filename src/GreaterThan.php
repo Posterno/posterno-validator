@@ -33,7 +33,7 @@ class GreaterThan extends AbstractValidator {
 		}
 
 		if ( null === $this->message ) {
-			$this->message = 'The value must be greater than ' . $this->value . '.';
+			$this->message = sprintf( esc_html__( 'The value must be greater than %s' ), $this->value );
 		}
 
 		return ( $this->input > $this->value );
