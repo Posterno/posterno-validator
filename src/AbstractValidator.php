@@ -43,15 +43,28 @@ abstract class AbstractValidator implements ValidatorInterface {
 	protected $message = null;
 
 	/**
+	 * Additional args to the send to the validator.
+	 *
+	 * @var array
+	 */
+	protected $args = [];
+
+	/**
 	 * Get things started.
 	 *
 	 * @param mixed  $value the validator value.
 	 * @param string $message the validation message.
+	 * @param array  $args additional args to send to the validation class.
 	 */
-	public function __construct( $value = null, $message = null ) {
+	public function __construct( $value = null, $message = null, $args = [] ) {
 		$this->setValue( $value );
+
 		if ( null !== $message ) {
 			$this->setMessage( $message );
+		}
+
+		if ( ! empty( $args ) ) {
+			$this->setArgs( $args );
 		}
 	}
 
@@ -113,6 +126,25 @@ abstract class AbstractValidator implements ValidatorInterface {
 	public function setInput( $input = null ) {
 		$this->input = $input;
 		return $this;
+	}
+
+	/**
+	 * Utility method to set args to the validator.
+	 *
+	 * @param array $args args to send to the validation class.
+	 * @return void
+	 */
+	public function setArgs( $args = [] ) {
+		$this->args = $args;
+	}
+
+	/**
+	 * Get args assigned to the validator.
+	 *
+	 * @return array
+	 */
+	public function getArgs() {
+		return (array) $this->args;
 	}
 
 	/**

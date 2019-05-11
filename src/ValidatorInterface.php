@@ -27,11 +27,15 @@ interface ValidatorInterface {
 
 	public function getInput();
 
-	public function setValue( $value);
+	public function getArgs();
+
+	public function setValue( $value );
 
 	public function setMessage( $msg = null );
 
 	public function setInput( $input = null );
+
+	public function setArgs( $args = [] );
 
 	public function evaluate( $input = null );
 
