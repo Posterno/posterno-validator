@@ -32,7 +32,7 @@ class RegEx extends AbstractValidator {
 			$this->input = $input;
 		}
 		if ( null === $this->message ) {
-			$this->message = esc_html__( 'The format is not correct.' );
+			$this->message = esc_html__( 'The format is not correct.', 'posterno' );
 		}
 		return (bool) ( preg_match( $this->value, $this->input ) );
 	}

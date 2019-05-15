@@ -33,7 +33,7 @@ class KeyContained extends AbstractValidator {
 		}
 
 		if ( null === $this->message ) {
-			$this->message = esc_html__( 'Please select a valid value.' );
+			$this->message = esc_html__( 'Please select a valid value.', 'posterno' );
 		}
 
 		return array_key_exists( $this->input, $this->value );

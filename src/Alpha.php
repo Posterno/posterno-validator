@@ -33,7 +33,7 @@ class Alpha extends AbstractValidator {
 		}
 
 		if ( null === $this->message ) {
-			$this->message = sprintf( esc_html__( 'The value must only contain characters of the alphabet %s.' ), $this->value );
+			$this->message = sprintf( esc_html__( 'The value must only contain characters of the alphabet %s.', 'posterno' ), $this->value );
 		}
 
 		return (bool) ( preg_match( '/^[a-zA-Z]+$/', $this->input ) );

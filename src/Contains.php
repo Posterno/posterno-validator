@@ -32,7 +32,7 @@ class Contains extends AbstractValidator {
 			$this->input = $input;
 		}
 		if ( null === $this->message ) {
-			$this->message = esc_html__( 'Input not found in the specified value.' );
+			$this->message = esc_html__( 'Input not found in the specified value.', 'posterno' );
 		}
 		$result   = false;
 		$needle   = $this->value;

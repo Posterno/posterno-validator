@@ -33,7 +33,7 @@ class VerifyPassword extends AbstractValidator {
 		}
 
 		if ( null === $this->message ) {
-			$this->message = esc_html__( 'The password you entered is incorrect.' );
+			$this->message = esc_html__( 'The password you entered is incorrect.', 'posterno' );
 		}
 
 		$user = wp_get_current_user();

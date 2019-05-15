@@ -33,7 +33,7 @@ class NotEqual extends AbstractValidator {
 		}
 
 		if ( null === $this->message ) {
-			$this->message = sprintf( esc_html__( 'The value must not be equal to %s' ), $this->value );
+			$this->message = sprintf( esc_html__( 'The value must not be equal to %s', 'posterno' ), $this->value );
 		}
 
 		return ( $this->input !== $this->value );

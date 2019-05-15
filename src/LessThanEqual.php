@@ -33,7 +33,7 @@ class LessThanEqual extends AbstractValidator {
 		}
 
 		if ( null === $this->message ) {
-			$this->message = sprintf( esc_html__( 'The value must be less than or equal to %s' ), $this->value );
+			$this->message = sprintf( esc_html__( 'The value must be less than or equal to %s', 'posterno' ), $this->value );
 		}
 
 		return ( $this->input <= $this->value );

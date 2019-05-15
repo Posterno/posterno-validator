@@ -36,7 +36,7 @@ class TermExists extends AbstractValidator {
 		}
 
 		if ( null === $this->message ) {
-			$this->message = esc_html__( 'Submitted term is invalid.' );
+			$this->message = esc_html__( 'Submitted term is invalid.', 'posterno' );
 		}
 
 		if ( is_array( $this->getInput() ) ) {

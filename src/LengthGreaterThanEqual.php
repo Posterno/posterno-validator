@@ -32,7 +32,7 @@ class LengthGreaterThanEqual extends AbstractValidator {
 			$this->input = $input;
 		}
 		if ( null === $this->message ) {
-			$this->message = sprintf( esc_html__( 'Value length must be greater than or equal to %s' ), $this->value );
+			$this->message = sprintf( esc_html__( 'Value length must be greater than or equal to %s', 'posterno' ), $this->value );
 		}
 		return ( strlen( $this->input ) >= $this->value );
 	}

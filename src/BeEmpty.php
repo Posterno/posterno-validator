@@ -33,7 +33,7 @@ class BeEmpty extends AbstractValidator {
 		}
 
 		if ( null === $this->message ) {
-			$this->message = esc_html__( 'This field is for validation purposes and should be left unchanged.' );
+			$this->message = esc_html__( 'This field is for validation purposes and should be left unchanged.', 'posterno' );
 		}
 
 		return ( empty( $this->input ) );

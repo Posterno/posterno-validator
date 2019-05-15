@@ -38,7 +38,7 @@ class LengthBetweenEqual extends AbstractValidator {
 			$this->input = $input;
 		}
 		if ( null === $this->message ) {
-			$this->message = sprintf( esc_html__( 'Value length must be between or equal to %1$s and %2$s.' ), $this->value[0], $this->value[1] );
+			$this->message = sprintf( esc_html__( 'Value length must be between or equal to %1$s and %2$s.', 'posterno' ), $this->value[0], $this->value[1] );
 		}
 		return ( ( strlen( $this->input ) >= $this->value[0] ) && ( strlen( $this->input ) <= $this->value[1] ) );
 	}
