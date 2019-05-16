@@ -39,9 +39,13 @@ class TermExists extends AbstractValidator {
 			$this->message = esc_html__( 'Submitted term is invalid.', 'posterno' );
 		}
 
-		if ( is_array( $this->getInput() ) ) {
-			foreach ( $this->getInput() as $value ) {
-				return term_exists( absint( $value ), $taxonomy );
+		if ( isset( $this->getArgs()['multiple'] ) && $this->getArgs()['multiple'] === true ) {
+			$terms_array = json_decode( $this->input );
+
+			if ( is_array( $terms_array ) ) {
+				foreach ( $terms_array as $value ) {
+					return term_exists( absint( $value ), $taxonomy );
+				}
 			}
 		}
 
