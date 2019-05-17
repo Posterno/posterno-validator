@@ -36,6 +36,12 @@ class ValueContained extends AbstractValidator {
 			$this->message = esc_html__( 'Please select a valid value.', 'posterno' );
 		}
 
+		if ( is_array( $this->getInput() ) && ! empty( $this->getInput() ) ) {
+			foreach ( $this->getInput() as $val ) {
+				return in_array( $val, $this->getValue() );
+			}
+		}
+
 		return in_array( $this->input, $this->value );
 	}
 
