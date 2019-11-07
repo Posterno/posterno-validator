@@ -28,8 +28,13 @@ class Numeric extends AbstractValidator {
 	 * @return mixed
 	 */
 	public function evaluate( $input = null ) {
+
 		if ( null !== $input ) {
 			$this->input = $input;
+		}
+
+		if ( empty( $this->input ) ) {
+			return true;
 		}
 
 		if ( null === $this->message ) {
